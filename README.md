@@ -145,10 +145,6 @@ outputs/
   eval/
     eval_results.json          # raw metric results
     eval_report.html           # HTML report with side-by-side comparisons
-
-docs/
-  Tree_based_unbiased_finetuning.pdf   # full pipeline spec
-  Stage3_Memory_Optimization.pdf       # Stage 3 HPC optimization notes
 ```
 
 ---
