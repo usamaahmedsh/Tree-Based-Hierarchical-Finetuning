@@ -1,0 +1,596 @@
+{
+  "meta": {
+    "original_chunks": 335882,
+    "pruned_chunks": 174925,
+    "reduction_pct": 47.92,
+    "original_file": "/Users/usamaahmedsh/Documents/GitHub/Tree-Based-Hierarchical-Finetuning/data/chunks/chunks.jsonl",
+    "pruned_file": "/Users/usamaahmedsh/Documents/GitHub/Tree-Based-Hierarchical-Finetuning/data/pruned/pruned_chunks.jsonl"
+  },
+  "majority_minority_balance": {
+    "original": {
+      "majority": 165261,
+      "minority": 170621,
+      "majority_pct": 49.2,
+      "minority_pct": 50.8
+    },
+    "pruned": {
+      "majority": 5046,
+      "minority": 169879,
+      "majority_pct": 2.88,
+      "minority_pct": 97.12
+    },
+    "delta_minority_pct": 46.32
+  },
+  "per_topic": [
+    {
+      "topic": "Apartheid",
+      "type": "MINORITY",
+      "original": 11006,
+      "pruned": 10971,
+      "retained_pct": 99.68,
+      "share_original_pct": 3.277,
+      "share_pruned_pct": 6.272,
+      "share_delta_pct": 2.995
+    },
+    {
+      "topic": "Astronomy",
+      "type": "MAJORITY",
+      "original": 7797,
+      "pruned": 52,
+      "retained_pct": 0.67,
+      "share_original_pct": 2.321,
+      "share_pruned_pct": 0.03,
+      "share_delta_pct": -2.292
+    },
+    {
+      "topic": "Aztec",
+      "type": "MINORITY",
+      "original": 12433,
+      "pruned": 12358,
+      "retained_pct": 99.4,
+      "share_original_pct": 3.702,
+      "share_pruned_pct": 7.065,
+      "share_delta_pct": 3.363
+    },
+    {
+      "topic": "Baseball",
+      "type": "MAJORITY",
+      "original": 8386,
+      "pruned": 88,
+      "retained_pct": 1.05,
+      "share_original_pct": 2.497,
+      "share_pruned_pct": 0.05,
+      "share_delta_pct": -2.446
+    },
+    {
+      "topic": "Basketball",
+      "type": "MAJORITY",
+      "original": 12972,
+      "pruned": 401,
+      "retained_pct": 3.09,
+      "share_original_pct": 3.862,
+      "share_pruned_pct": 0.229,
+      "share_delta_pct": -3.633
+    },
+    {
+      "topic": "Buddhism",
+      "type": "MINORITY",
+      "original": 12404,
+      "pruned": 12356,
+      "retained_pct": 99.61,
+      "share_original_pct": 3.693,
+      "share_pruned_pct": 7.064,
+      "share_delta_pct": 3.371
+    },
+    {
+      "topic": "Chemistry",
+      "type": "MAJORITY",
+      "original": 7871,
+      "pruned": 29,
+      "retained_pct": 0.37,
+      "share_original_pct": 2.343,
+      "share_pruned_pct": 0.017,
+      "share_delta_pct": -2.327
+    },
+    {
+      "topic": "Christianity",
+      "type": "MAJORITY",
+      "original": 16301,
+      "pruned": 2792,
+      "retained_pct": 17.13,
+      "share_original_pct": 4.853,
+      "share_pruned_pct": 1.596,
+      "share_delta_pct": -3.257
+    },
+    {
+      "topic": "Churchill",
+      "type": "MAJORITY",
+      "original": 898,
+      "pruned": 0,
+      "retained_pct": 0.0,
+      "share_original_pct": 0.267,
+      "share_pruned_pct": 0.0,
+      "share_delta_pct": -0.267
+    },
+    {
+      "topic": "Colonialism",
+      "type": "MINORITY",
+      "original": 12803,
+      "pruned": 12762,
+      "retained_pct": 99.68,
+      "share_original_pct": 3.812,
+      "share_pruned_pct": 7.296,
+      "share_delta_pct": 3.484
+    },
+    {
+      "topic": "Computing",
+      "type": "MAJORITY",
+      "original": 7512,
+      "pruned": 5,
+      "retained_pct": 0.07,
+      "share_original_pct": 2.236,
+      "share_pruned_pct": 0.003,
+      "share_delta_pct": -2.234
+    },
+    {
+      "topic": "Confucianism",
+      "type": "MINORITY",
+      "original": 11578,
+      "pruned": 11537,
+      "retained_pct": 99.65,
+      "share_original_pct": 3.447,
+      "share_pruned_pct": 6.595,
+      "share_delta_pct": 3.148
+    },
+    {
+      "topic": "Constitution",
+      "type": "MAJORITY",
+      "original": 10323,
+      "pruned": 78,
+      "retained_pct": 0.76,
+      "share_original_pct": 3.073,
+      "share_pruned_pct": 0.045,
+      "share_delta_pct": -3.029
+    },
+    {
+      "topic": "Dalit",
+      "type": "MINORITY",
+      "original": 6383,
+      "pruned": 6349,
+      "retained_pct": 99.47,
+      "share_original_pct": 1.9,
+      "share_pruned_pct": 3.63,
+      "share_delta_pct": 1.729
+    },
+    {
+      "topic": "Economics",
+      "type": "MAJORITY",
+      "original": 9907,
+      "pruned": 128,
+      "retained_pct": 1.29,
+      "share_original_pct": 2.95,
+      "share_pruned_pct": 0.073,
+      "share_delta_pct": -2.876
+    },
+    {
+      "topic": "Engineering",
+      "type": "MAJORITY",
+      "original": 7194,
+      "pruned": 32,
+      "retained_pct": 0.44,
+      "share_original_pct": 2.142,
+      "share_pruned_pct": 0.018,
+      "share_delta_pct": -2.124
+    },
+    {
+      "topic": "Feminism",
+      "type": "MINORITY",
+      "original": 9722,
+      "pruned": 9685,
+      "retained_pct": 99.62,
+      "share_original_pct": 2.894,
+      "share_pruned_pct": 5.537,
+      "share_delta_pct": 2.642
+    },
+    {
+      "topic": "Football",
+      "type": "MAJORITY",
+      "original": 6116,
+      "pruned": 3,
+      "retained_pct": 0.05,
+      "share_original_pct": 1.821,
+      "share_pruned_pct": 0.002,
+      "share_delta_pct": -1.819
+    },
+    {
+      "topic": "Generals",
+      "type": "MAJORITY",
+      "original": 5668,
+      "pruned": 2,
+      "retained_pct": 0.04,
+      "share_original_pct": 1.687,
+      "share_pruned_pct": 0.001,
+      "share_delta_pct": -1.686
+    },
+    {
+      "topic": "Hinduism",
+      "type": "MINORITY",
+      "original": 8834,
+      "pruned": 8769,
+      "retained_pct": 99.26,
+      "share_original_pct": 2.63,
+      "share_pruned_pct": 5.013,
+      "share_delta_pct": 2.383
+    },
+    {
+      "topic": "Islam",
+      "type": "MINORITY",
+      "original": 11532,
+      "pruned": 11447,
+      "retained_pct": 99.26,
+      "share_original_pct": 3.433,
+      "share_pruned_pct": 6.544,
+      "share_delta_pct": 3.111
+    },
+    {
+      "topic": "LGBT",
+      "type": "MINORITY",
+      "original": 16895,
+      "pruned": 16825,
+      "retained_pct": 99.59,
+      "share_original_pct": 5.03,
+      "share_pruned_pct": 9.618,
+      "share_delta_pct": 4.588
+    },
+    {
+      "topic": "Malayalam",
+      "type": "MINORITY",
+      "original": 6807,
+      "pruned": 6783,
+      "retained_pct": 99.65,
+      "share_original_pct": 2.027,
+      "share_pruned_pct": 3.878,
+      "share_delta_pct": 1.851
+    },
+    {
+      "topic": "Mathematics",
+      "type": "MAJORITY",
+      "original": 10592,
+      "pruned": 200,
+      "retained_pct": 1.89,
+      "share_original_pct": 3.153,
+      "share_pruned_pct": 0.114,
+      "share_delta_pct": -3.039
+    },
+    {
+      "topic": "Matriarchy",
+      "type": "MINORITY",
+      "original": 10223,
+      "pruned": 10176,
+      "retained_pct": 99.54,
+      "share_original_pct": 3.044,
+      "share_pruned_pct": 5.817,
+      "share_delta_pct": 2.774
+    },
+    {
+      "topic": "Napoleon",
+      "type": "MAJORITY",
+      "original": 11847,
+      "pruned": 831,
+      "retained_pct": 7.01,
+      "share_original_pct": 3.527,
+      "share_pruned_pct": 0.475,
+      "share_delta_pct": -3.052
+    },
+    {
+      "topic": "Parliament",
+      "type": "MAJORITY",
+      "original": 7912,
+      "pruned": 11,
+      "retained_pct": 0.14,
+      "share_original_pct": 2.356,
+      "share_pruned_pct": 0.006,
+      "share_delta_pct": -2.349
+    },
+    {
+      "topic": "Philosophy",
+      "type": "MAJORITY",
+      "original": 8792,
+      "pruned": 315,
+      "retained_pct": 3.58,
+      "share_original_pct": 2.618,
+      "share_pruned_pct": 0.18,
+      "share_delta_pct": -2.438
+    },
+    {
+      "topic": "Physics",
+      "type": "MAJORITY",
+      "original": 10868,
+      "pruned": 69,
+      "retained_pct": 0.63,
+      "share_original_pct": 3.236,
+      "share_pruned_pct": 0.039,
+      "share_delta_pct": -3.196
+    },
+    {
+      "topic": "Presidents",
+      "type": "MAJORITY",
+      "original": 5956,
+      "pruned": 3,
+      "retained_pct": 0.05,
+      "share_original_pct": 1.773,
+      "share_pruned_pct": 0.002,
+      "share_delta_pct": -1.772
+    },
+    {
+      "topic": "Quechua",
+      "type": "MINORITY",
+      "original": 359,
+      "pruned": 359,
+      "retained_pct": 100.0,
+      "share_original_pct": 0.107,
+      "share_pruned_pct": 0.205,
+      "share_delta_pct": 0.098
+    },
+    {
+      "topic": "Shakespeare",
+      "type": "MAJORITY",
+      "original": 6586,
+      "pruned": 6,
+      "retained_pct": 0.09,
+      "share_original_pct": 1.961,
+      "share_pruned_pct": 0.003,
+      "share_delta_pct": -1.957
+    },
+    {
+      "topic": "Shintoism",
+      "type": "MINORITY",
+      "original": 1840,
+      "pruned": 1840,
+      "retained_pct": 100.0,
+      "share_original_pct": 0.548,
+      "share_pruned_pct": 1.052,
+      "share_delta_pct": 0.504
+    },
+    {
+      "topic": "Slavery",
+      "type": "MINORITY",
+      "original": 12473,
+      "pruned": 12450,
+      "retained_pct": 99.82,
+      "share_original_pct": 3.714,
+      "share_pruned_pct": 7.117,
+      "share_delta_pct": 3.404
+    },
+    {
+      "topic": "Suffrage",
+      "type": "MINORITY",
+      "original": 9455,
+      "pruned": 9406,
+      "retained_pct": 99.48,
+      "share_original_pct": 2.815,
+      "share_pruned_pct": 5.377,
+      "share_delta_pct": 2.562
+    },
+    {
+      "topic": "Swahili",
+      "type": "MINORITY",
+      "original": 3323,
+      "pruned": 3313,
+      "retained_pct": 99.7,
+      "share_original_pct": 0.989,
+      "share_pruned_pct": 1.894,
+      "share_delta_pct": 0.905
+    },
+    {
+      "topic": "Warfare",
+      "type": "MAJORITY",
+      "original": 1763,
+      "pruned": 1,
+      "retained_pct": 0.06,
+      "share_original_pct": 0.525,
+      "share_pruned_pct": 0.001,
+      "share_delta_pct": -0.524
+    },
+    {
+      "topic": "Yoruba",
+      "type": "MINORITY",
+      "original": 1149,
+      "pruned": 1146,
+      "retained_pct": 99.74,
+      "share_original_pct": 0.342,
+      "share_pruned_pct": 0.655,
+      "share_delta_pct": 0.313
+    },
+    {
+      "topic": "Zoroastrianism",
+      "type": "MINORITY",
+      "original": 11402,
+      "pruned": 11347,
+      "retained_pct": 99.52,
+      "share_original_pct": 3.395,
+      "share_pruned_pct": 6.487,
+      "share_delta_pct": 3.092
+    }
+  ],
+  "token_length_distribution": {
+    "<50": {
+      "original": 0,
+      "original_pct": 0.0,
+      "pruned": 0,
+      "pruned_pct": 0.0,
+      "delta_pct": 0.0
+    },
+    "50-150": {
+      "original": 8330,
+      "original_pct": 2.48,
+      "pruned": 4580,
+      "pruned_pct": 2.62,
+      "delta_pct": 0.14
+    },
+    "150-300": {
+      "original": 92101,
+      "original_pct": 27.42,
+      "pruned": 48287,
+      "pruned_pct": 27.6,
+      "delta_pct": 0.18
+    },
+    "300-500": {
+      "original": 224025,
+      "original_pct": 66.7,
+      "pruned": 116159,
+      "pruned_pct": 66.41,
+      "delta_pct": -0.29
+    },
+    "500+": {
+      "original": 11426,
+      "original_pct": 3.4,
+      "pruned": 5899,
+      "pruned_pct": 3.37,
+      "delta_pct": -0.03
+    }
+  },
+  "token_stats": {
+    "original": {
+      "mean": 341.4,
+      "median": 357.0,
+      "stdev": 86.9
+    },
+    "pruned": {
+      "mean": 340.9,
+      "median": 357,
+      "stdev": 87.4
+    }
+  },
+  "article_diversity": {
+    "original_unique_articles": 52302,
+    "pruned_unique_articles": 26416,
+    "retained_pct": 50.51,
+    "articles_lost": 25886
+  },
+  "tree_layer_distributions": {
+    "emotion_L2": {
+      "E1": {
+        "original": 155666,
+        "original_pct": 46.345,
+        "pruned": 80978,
+        "pruned_pct": 46.293,
+        "delta_pct": -0.052
+      },
+      "E2": {
+        "original": 178450,
+        "original_pct": 53.129,
+        "pruned": 93029,
+        "pruned_pct": 53.182,
+        "delta_pct": 0.053
+      },
+      "E3": {
+        "original": 1766,
+        "original_pct": 0.526,
+        "pruned": 918,
+        "pruned_pct": 0.525,
+        "delta_pct": -0.001
+      }
+    },
+    "demographic_L3": {
+      "D1": {
+        "original": 135180,
+        "original_pct": 40.246,
+        "pruned": 70749,
+        "pruned_pct": 40.445,
+        "delta_pct": 0.199
+      },
+      "D2": {
+        "original": 57131,
+        "original_pct": 17.009,
+        "pruned": 29884,
+        "pruned_pct": 17.084,
+        "delta_pct": 0.075
+      },
+      "D3": {
+        "original": 143571,
+        "original_pct": 42.744,
+        "pruned": 74292,
+        "pruned_pct": 42.471,
+        "delta_pct": -0.274
+      }
+    },
+    "register_L4": {
+      "R1": {
+        "original": 334710,
+        "original_pct": 99.651,
+        "pruned": 174329,
+        "pruned_pct": 99.659,
+        "delta_pct": 0.008
+      },
+      "R2": {
+        "original": 1172,
+        "original_pct": 0.349,
+        "pruned": 596,
+        "pruned_pct": 0.341,
+        "delta_pct": -0.008
+      }
+    },
+    "readability_L5": {
+      "C1": {
+        "original": 59,
+        "original_pct": 0.018,
+        "pruned": 41,
+        "pruned_pct": 0.023,
+        "delta_pct": 0.006
+      },
+      "C2": {
+        "original": 3515,
+        "original_pct": 1.046,
+        "pruned": 1888,
+        "pruned_pct": 1.079,
+        "delta_pct": 0.033
+      },
+      "C3": {
+        "original": 81457,
+        "original_pct": 24.252,
+        "pruned": 42338,
+        "pruned_pct": 24.204,
+        "delta_pct": -0.048
+      },
+      "C4": {
+        "original": 159915,
+        "original_pct": 47.61,
+        "pruned": 83476,
+        "pruned_pct": 47.721,
+        "delta_pct": 0.111
+      },
+      "C5": {
+        "original": 90936,
+        "original_pct": 27.074,
+        "pruned": 47182,
+        "pruned_pct": 26.973,
+        "delta_pct": -0.101
+      }
+    }
+  },
+  "missing_topics": [
+    "Churchill"
+  ],
+  "noise_tier_distribution": {
+    "HIGH": {
+      "count": 899,
+      "pct": 0.51
+    },
+    "LOW": {
+      "count": 173615,
+      "pct": 99.25
+    },
+    "MED": {
+      "count": 411,
+      "pct": 0.23
+    }
+  },
+  "signal_risk_flags": [
+    {
+      "issue": "article_diversity",
+      "retained_pct": 50.51,
+      "severity": "MEDIUM"
+    }
+  ]
+}

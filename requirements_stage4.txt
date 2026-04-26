@@ -1,0 +1,19 @@
+# Stage 4 — QLoRA Fine-Tuning (HPC / CUDA)
+# Install with:
+#   pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cu121
+#   pip install -r requirements_stage4.txt
+
+# Fine-tuning stack
+transformers>=4.44.0
+peft>=0.12.0
+trl>=1.2.0
+accelerate>=0.34.0
+bitsandbytes>=0.43.0
+
+# Data + evaluation
+datasets>=2.18.0
+evaluate>=0.4.0
+
+# Utilities
+numpy>=1.24.0
+psutil>=5.9.0

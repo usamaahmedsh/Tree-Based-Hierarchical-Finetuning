@@ -1,0 +1,117 @@
+{
+  "run_timestamp": "2026-03-22T11:44:30",
+  "layers": {
+    "l1_exact": {
+      "input_count": 335882,
+      "output_count": 335882,
+      "removed_count": 0,
+      "removal_rate": 0.0
+    },
+    "l2_minhash": {
+      "input_count": 335882,
+      "output_count": 335868,
+      "removed_count": 14,
+      "removal_rate": 0.0
+    },
+    "l3_tfidf": {
+      "input_count": 335868,
+      "output_count": 335217,
+      "removed_count": 651,
+      "removal_rate": 0.0019
+    },
+    "l4_semantic": {
+      "input_count": 335217,
+      "output_count": 334395,
+      "removed_count": 822,
+      "removal_rate": 0.0025
+    },
+    "l5_leaf": {
+      "input_count": 334395,
+      "output_count": 174925,
+      "removed_count": 159470,
+      "removal_rate": 0.4769
+    }
+  },
+  "total": {
+    "input": 335882,
+    "output": 174925,
+    "removed": 160957,
+    "total_rate": 0.4792
+  },
+  "noise_tier_distribution": {
+    "HIGH": {
+      "leaves": 19,
+      "chunks": 899
+    },
+    "MED": {
+      "leaves": 12,
+      "chunks": 411
+    },
+    "LOW": {
+      "leaves": 10442,
+      "chunks": 173615
+    }
+  },
+  "top10_leaves_after_pruning": [
+    {
+      "leaf_id": "ROOT_T0_E1_D3_R1_C4",
+      "majority_score": 101.36103824204234,
+      "chunks_before": 23882,
+      "chunks_after": 160
+    },
+    {
+      "leaf_id": "ROOT_T0_E2_D1_R1_C4",
+      "majority_score": 98.24473065285864,
+      "chunks_before": 23148,
+      "chunks_after": 219
+    },
+    {
+      "leaf_id": "ROOT_T0_E1_D1_R1_C4",
+      "majority_score": 72.25285727277334,
+      "chunks_before": 17026,
+      "chunks_after": 49
+    },
+    {
+      "leaf_id": "ROOT_T0_E2_D3_R1_C4",
+      "majority_score": 68.70349331561043,
+      "chunks_before": 16190,
+      "chunks_after": 23
+    },
+    {
+      "leaf_id": "ROOT_T0_E1_D3_R1_C5",
+      "majority_score": 66.75049400903754,
+      "chunks_before": 15730,
+      "chunks_after": 61
+    },
+    {
+      "leaf_id": "ROOT_T0_E2_D3_R1_C5",
+      "majority_score": 42.32526572487703,
+      "chunks_before": 9977,
+      "chunks_after": 30
+    },
+    {
+      "leaf_id": "ROOT_T0_E2_D1_R1_C3",
+      "majority_score": 41.06006182627112,
+      "chunks_before": 9679,
+      "chunks_after": 9
+    },
+    {
+      "leaf_id": "ROOT_T0_E1_D3_R1_C3",
+      "majority_score": 35.40485513854266,
+      "chunks_before": 8347,
+      "chunks_after": 100
+    },
+    {
+      "leaf_id": "ROOT_T0_E1_D1_R1_C3",
+      "majority_score": 29.201959514840503,
+      "chunks_before": 6886,
+      "chunks_after": 22
+    },
+    {
+      "leaf_id": "ROOT_T0_E2_D1_R1_C5",
+      "majority_score": 29.184976912174655,
+      "chunks_before": 6882,
+      "chunks_after": 23
+    }
+  ]
+}

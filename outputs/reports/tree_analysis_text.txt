@@ -1,0 +1,44 @@
+==================================================
+TREE ANALYSIS REPORT
+==================================================
+Total Chunks: 335882
+Total Leaf Nodes: 42453
+Average Chunks per Leaf: 7.91
+
+--- TOP 5 LARGEST LEAVES ---
+1. T0 > E1 > D3 > R1 > C4 (ID: ROOT_T0_E1_D3_R1_C4) -> 23882 chunks
+2. T0 > E2 > D1 > R1 > C4 (ID: ROOT_T0_E2_D1_R1_C4) -> 23148 chunks
+3. T0 > E1 > D1 > R1 > C4 (ID: ROOT_T0_E1_D1_R1_C4) -> 17026 chunks
+4. T0 > E2 > D3 > R1 > C4 (ID: ROOT_T0_E2_D3_R1_C4) -> 16190 chunks
+5. T0 > E1 > D3 > R1 > C5 (ID: ROOT_T0_E1_D3_R1_C5) -> 15730 chunks
+
+--- TOP 3 TOPICS ---
+T0: 162714 chunks (48.4%)
+T1: 711 chunks (0.2%)
+T2: 673 chunks (0.2%)
+
+--- TOP 3 EMOTIONS ---
+E1: 170436 chunks (50.7%)
+E2: 164791 chunks (49.1%)
+E3: 655 chunks (0.2%)
+
+--- TOP 3 DEMOGRAPHICS ---
+D3: 164652 chunks (49.0%)
+D1: 146158 chunks (43.5%)
+D2: 25072 chunks (7.5%)
+
+--- TOP 3 REGISTERS/FORMALITY ---
+R1: 335470 chunks (99.9%)
+R2: 412 chunks (0.1%)
+
+--- TOP 3 READABILITY LEVELS ---
+C4: 178563 chunks (53.2%)
+C5: 83380 chunks (24.8%)
+C3: 71025 chunks (21.1%)
+
+--- LAYER DISTRIBUTION SUMMARY ---
+Unique Topics (Layer 1):       5965
+Unique Emotions (Layer 2):     3
+Unique Demographics (Layer 3): 3
+Unique Registers (Layer 4):    2
+Unique Readability (Layer 5):  5

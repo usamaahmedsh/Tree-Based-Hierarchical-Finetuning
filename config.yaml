@@ -1,0 +1,262 @@
+# ============================================================
+# De-Biasing LLM Fine-Tuning Pipeline — Configuration
+# ============================================================
+
+# -----------------------------------------------------------
+# Stage 0: Data Acquisition & Preprocessing
+# -----------------------------------------------------------
+corpus:
+  # How many Wikipedia pages to collect per category topic
+  pages_per_topic: 25
+
+  # Wikipedia API settings
+  api_url: "https://en.wikipedia.org/w/api.php"
+  user_agent: "DeBiasingPipeline/0.1 (research)"
+  request_timeout: 30.0
+
+  # Async concurrency controls (conservative to avoid Wikimedia 403s)
+  max_concurrent_requests: 5
+  rate_limit_per_second: 2
+
+  # Category traversal depth (how deep to follow subcategories)
+  category_depth: 2
+
+  # Chunking: paragraph-level, target token range
+  chunk_min_tokens: 200
+  chunk_max_tokens: 500
+
+  # Deduplication: MinHash Jaccard threshold
+  dedup_jaccard_threshold: 0.85
+  minhash_num_perm: 128  # number of permutations for MinHash
+
+  # Output directory for raw corpus
+  raw_dir: "data/raw"
+  chunks_dir: "data/chunks"
+
+  # Wikipedia category topics to collect
+  # Format: { name: str, category: str, group: minority|majority }
+  topics:
+    # --- Majority / Over-represented (HIGH noise later) ---
+    - name: "Physics"
+      category: "Category:Physics"
+      group: "majority"
+
+    - name: "Mathematics"
+      category: "Category:Mathematics"
+      group: "majority"
+
+    - name: "Engineering"
+      category: "Category:Engineering"
+      group: "majority"
+
+    - name: "Computing"
+      category: "Category:Computing"
+      group: "majority"
+
+    - name: "Baseball"
+      category: "Category:Baseball"
+      group: "majority"
+
+    - name: "Football"
+      category: "Category:American football"
+      group: "majority"
+
+    - name: "Basketball"
+      category: "Category:Basketball"
+      group: "majority"
+
+    - name: "Napoleon"
+      category: "Category:Napoleon"
+      group: "majority"
+
+    - name: "Churchill"
+      category: "Category:Winston Churchill"
+      group: "majority"
+
+    - name: "Shakespeare"
+      category: "Category:William Shakespeare"
+      group: "majority"
+
+    - name: "Christianity"
+      category: "Category:Christianity"
+      group: "majority"
+
+    - name: "Philosophy"
+      category: "Category:Philosophy"
+      group: "majority"
+
+    - name: "Economics"
+      category: "Category:Economics"
+      group: "majority"
+
+    - name: "Warfare"
+      category: "Category:Warfare"
+      group: "majority"
+
+    - name: "Generals"
+      category: "Category:Generals"
+      group: "majority"
+
+    - name: "Presidents"
+      category: "Category:Presidents of the United States"
+      group: "majority"
+
+    - name: "Parliament"
+      category: "Category:Parliament"
+      group: "majority"
+
+    - name: "Constitution"
+      category: "Category:Constitutions"
+      group: "majority"
+
+    - name: "Astronomy"
+      category: "Category:Astronomy"
+      group: "majority"
+
+    - name: "Chemistry"
+      category: "Category:Chemistry"
+      group: "majority"
+
+    # --- Minority / Under-represented (LOW noise later) ---
+    - name: "Feminism"
+      category: "Category:Feminism"
+      group: "minority"
+
+    - name: "Hinduism"
+      category: "Category:Hinduism"
+      group: "minority"
+
+    - name: "Buddhism"
+      category: "Category:Buddhism"
+      group: "minority"
+
+    - name: "Islam"
+      category: "Category:Islam"
+      group: "minority"
+
+    - name: "Colonialism"
+      category: "Category:Colonialism"
+      group: "minority"
+
+    - name: "Slavery"
+      category: "Category:Slavery"
+      group: "minority"
+
+    - name: "Apartheid"
+      category: "Category:Apartheid"
+      group: "minority"
+
+    - name: "Suffrage"
+      category: "Category:Suffrage"
+      group: "minority"
+
+    - name: "Matriarchy"
+      category: "Category:Matriarchy"
+      group: "minority"
+
+    - name: "Yoruba"
+      category: "Category:Yoruba people"
+      group: "minority"
+
+    - name: "Swahili"
+      category: "Category:Swahili culture"
+      group: "minority"
+
+    - name: "Aztec"
+      category: "Category:Aztecs"
+      group: "minority"
+
+    - name: "Quechua"
+      category: "Category:Quechua people"
+      group: "minority"
+
+    - name: "Malayalam"
+      category: "Category:Malayalam"
+      group: "minority"
+
+    - name: "Confucianism"
+      category: "Category:Confucianism"
+      group: "minority"
+
+    - name: "Shintoism"
+      category: "Category:Shinto"
+      group: "minority"
+
+    - name: "Zoroastrianism"
+      category: "Category:Zoroastrianism"
+      group: "minority"
+
+    - name: "Aboriginals"
+      category: "Category:Aboriginal Australians"
+      group: "minority"
+
+    - name: "Dalit"
+      category: "Category:Dalits"
+      group: "minority"
+
+    - name: "LGBT"
+      category: "Category:LGBT"
+      group: "minority"
+
+# -----------------------------------------------------------
+# Stage 1: Hierarchical Stratification Tree
+# -----------------------------------------------------------
+tree:
+  # Grid search sample fraction (10–20% of corpus for calibration)
+  grid_search_sample_fraction: 1.00
+
+  # Hard floor: minimum documents per leaf node
+  leaf_min_size: 30
+
+  # Maximum tree depth (5 layers as per paper)
+  max_depth: 5
+
+  # BERTopic (Layer 1 — Topic / subject matter)
+  bertopic:
+    min_cluster_size: 10
+    umap_n_neighbors: 10
+    umap_n_components: 5
+    hdbscan_min_samples: 5
+    top_n_words: 10
+
+  # GoEmotions (Layer 2 — Emotional tone)
+  goemotions:
+    model: "bhadresh-savani/bert-base-uncased-emotion"
+    confidence_threshold: 0.3
+    batch_size: 32
+
+  # M3-Inference (Layer 3 — Demographic signals: gender, age)
+  m3inference:
+    confidence_threshold: 0.5
+
+  # Dialect / Register (Layer 4 — Language variety)
+  dialect:
+    model: "textattack/bert-base-uncased-CoLA"  # formality proxy
+    confidence_threshold: 0.4
+
+  # Readability (Layer 5 — Complexity)
+  readability:
+    # Score bins for Flesch Reading Ease
+    bins:
+      - label: "Very Easy"
+        min: 90
+        max: 100
+      - label: "Easy"
+        min: 70
+        max: 90
+      - label: "Standard"
+        min: 50
+        max: 70
+      - label: "Difficult"
+        min: 30
+        max: 50
+      - label: "Very Difficult"
+        min: 0
+        max: 30
+
+  # Tree visualization output
+  visualization:
+    output_dir: "outputs/tree_viz"
+    image_format: "png"   # png or svg
+    dpi: 150
+    max_label_length: 40  # Truncate long labels in image

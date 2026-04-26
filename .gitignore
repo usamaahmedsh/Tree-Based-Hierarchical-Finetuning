@@ -1,0 +1,32 @@
+# Environment
+.venv/
+.env
+
+# Large data files
+*.jsonl
+data/chunks/
+data/raw/
+data/stage3/
+data/stage3_full/
+data/full_chunks_with_tree.jsonl
+
+# Model checkpoints
+outputs/checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Logs
+logs/*.log
+
+# IDE
+.claude/
+.idea/
+.vscode/
+*.npy
