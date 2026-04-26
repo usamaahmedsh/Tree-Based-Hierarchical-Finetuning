@@ -152,6 +152,5 @@ outputs/
 ## Requirements
 
 ```bash
-pip install -r requirements.txt        # base pipeline
-pip install -r requirements_stage4.txt # fine-tuning (CUDA required)
+pip install -r requirements.txt        
 ```
